@@ -54,6 +54,16 @@ function genMatrixLvl1(){
         //inserisco l'indice di ogni casella, stampandolo al suo interno.
         const indexSquare = i;
         squareEl1.append(indexSquare);
+
+
+        //al click di ogni casella, la stessa diventa azzurra
+            squareEl1.addEventListener('click', function(){
+                this.style.backgroundColor = "turquoise"
+    
+                this.addEventListener('click', function(){
+                    this.style.backgroundColor = "inherit"
+                })
+            })
     }
 
 }
