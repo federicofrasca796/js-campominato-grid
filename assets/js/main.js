@@ -13,12 +13,15 @@ Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro. */
 
 //l'utente sceglie il livello di difficoltà
 const chooseLvl = prompt(`Scegli la difficoltà: 
-1 (facile) 2 (intermedio) 3(difficile)`);
+1 (facile) 2 (intermedio) 3 (difficile)`);
 
 //loop if per determinare la difficoltà scelta e generare matrici con griglie più/meno dense.
 if (chooseLvl == 1){
     //esegui funzione per matrice di difficoltà 1
     console.log('Difficoltà 1');
+
+    genMatrixLvl1();
+
 } else if (chooseLvl == 2) {
     //esegui funzione per matrice di difficoltà 2
     console.log('Difficoltà 2');
@@ -32,7 +35,25 @@ if (chooseLvl == 1){
 
 
 
-
 //per ogni livello di difficoltà, creo una funzione che inserisce i quadrati necessari.
 
-// function genMatrix8x8()
+container = document.getElementById('container')
+
+function genMatrixLvl1(){
+    //inserire classe per container di livello 1
+    container.className = "container1";
+
+    //inserire quadrati all'interno del container
+    for (let i = 1; i <= 100; i++) {
+        //creo l'elemento quadrato con classe square1 (avrà dimensioni appropriate al container1)
+        const squareEl1 = document.createElement('div');
+        squareEl1.className = 'square1';
+        //lo inserisco come figlio di container1
+        container.append(squareEl1);
+
+        //inserisco l'indice di ogni casella, stampandolo al suo interno.
+        const indexSquare = i;
+        squareEl1.append(indexSquare);
+    }
+
+}
