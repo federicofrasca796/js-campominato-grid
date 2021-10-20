@@ -18,16 +18,22 @@ const chooseLvl = prompt(`Scegli la difficoltà:
 //loop if per determinare la difficoltà scelta e generare matrici con griglie più/meno dense.
 if (chooseLvl == 1){
     //esegui funzione per matrice di difficoltà 1
-    console.log('Difficoltà 1');
+    // console.log('Difficoltà 1');
 
     genMatrixLvl1();
 
 } else if (chooseLvl == 2) {
     //esegui funzione per matrice di difficoltà 2
-    console.log('Difficoltà 2');
+    // console.log('Difficoltà 2');
+
+    genMatrixLvl2();
+
 } else if (chooseLvl == 3) {
     //esegui funzione per matrice di difficoltà 3
-    console.log('Difficoltà 3');
+    // console.log('Difficoltà 3');
+
+    genMatrixLvl3()
+    
 } else {
     //restituisci messaggio di errore
     console.log('Non ha scelto');
@@ -37,27 +43,89 @@ if (chooseLvl == 1){
 
 //per ogni livello di difficoltà, creo una funzione che inserisce i quadrati necessari.
 
-container = document.getElementById('container')
+container = document.getElementById('container');
 
+
+/**
+ * Attribuisce .container1 al #container. Inserisce 100 elementi .square1 dentro al .container1 e li numera in maniera ordinata. Al click di .square1 cambia il colore, al secondo click lo rimuove.
+ */
 function genMatrixLvl1(){
-    //inserire classe per container di livello 1
-    container.className = "container1";
+    //inserire classe container
+    
 
     //inserire quadrati all'interno del container
     for (let i = 1; i <= 100; i++) {
         //creo l'elemento quadrato con classe square1 (avrà dimensioni appropriate al container1)
-        const squareEl1 = document.createElement('div');
-        squareEl1.className = 'square1';
-        //lo inserisco come figlio di container1
-        container.append(squareEl1);
+        const squareEl = document.createElement('div');
+        squareEl.className = 'square1';
+        //lo inserisco come figlio di container
+        container.append(squareEl);
 
         //inserisco l'indice di ogni casella, stampandolo al suo interno.
         const indexSquare = i;
-        squareEl1.append(indexSquare);
+        squareEl.append(indexSquare);
 
 
         //al click di ogni casella, la stessa diventa azzurra
-            squareEl1.addEventListener('click', function(){
+            squareEl.addEventListener('click', function(){
+                this.style.backgroundColor = "turquoise"
+    
+                this.addEventListener('click', function(){
+                    this.style.backgroundColor = "inherit"
+                })
+            })
+    }
+
+}
+
+function genMatrixLvl2(){
+    //inserire classe per container di livello 2
+    
+
+    //inserire quadrati all'interno del container
+    for (let i = 1; i <= 81; i++) {
+        //creo l'elemento quadrato con classe square2 (avrà dimensioni appropriate al container1)
+        const squareEl = document.createElement('div');
+        squareEl.className = 'square2';
+        //lo inserisco come figlio di container
+        container.append(squareEl);
+
+        //inserisco l'indice di ogni casella, stampandolo al suo interno.
+        const indexSquare = i;
+        squareEl.append(indexSquare);
+
+
+        //al click di ogni casella, la stessa diventa azzurra
+            squareEl.addEventListener('click', function(){
+                this.style.backgroundColor = "turquoise"
+    
+                this.addEventListener('click', function(){
+                    this.style.backgroundColor = "inherit"
+                })
+            })
+    }
+
+}
+
+function genMatrixLvl3(){
+    //inserire classe per container di livello 3
+    
+
+    //inserire quadrati all'interno del container
+    for (let i = 1; i <= 49; i++) {
+        //creo l'elemento quadrato con classe square3 (avrà dimensioni appropriate al container1)
+        const squareEl = document.createElement('div');
+        squareEl.className = 'square3';
+        //lo inserisco come figlio di container
+        container.append(squareEl);
+
+        //inserisco l'indice di ogni casella, stampandolo al suo interno.
+        const indexSquare = i;
+        squareEl.append(indexSquare);
+
+
+        //al click di ogni casella, la stessa diventa azzurra
+            squareEl.addEventListener('click', function(){
                 this.style.backgroundColor = "turquoise"
     
                 this.addEventListener('click', function(){

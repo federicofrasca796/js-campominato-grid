@@ -12,13 +12,17 @@ body{
     font-family: sans-serif;
 }
 
-.container1 {
-    width: 1000px;
-    min-width: 1000px;
+#container{
     margin: auto;
     display: flex;
     flex-wrap: wrap;
 }
+
+.container {
+    width: 1000px;
+    min-width: 1000px;
+}
+
 
 .square1 {
     width: 100px;
@@ -28,3 +32,24 @@ body{
     line-height: 100px;
     color: white;
 }
+.square2 {
+    width: calc(1000px / 9);
+    height: calc(1000px / 9);
+    border: 1px solid white;
+    text-align: center;
+    line-height: calc(1000px / 9);
+    color: white;
+}
+.square3 {
+    width: calc(1000px / 7);
+    height: calc(1000px / 7);
+    border: 1px solid white;
+    text-align: center;
+    line-height: calc(1000px / 7);
+    color: white;
+}
+
+
+
+
+
