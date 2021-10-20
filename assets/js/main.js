@@ -36,7 +36,8 @@ if (chooseLvl == 1){
     
 } else {
     //restituisci messaggio di errore
-    console.log('Non ha scelto');
+    // console.log('Non ha scelto');
+    alert('Inserisci 1, 2 o 3. Refresh');
 }
 
 
@@ -47,11 +48,9 @@ container = document.getElementById('container');
 
 
 /**
- * Attribuisce .container1 al #container. Inserisce 100 elementi .square1 dentro al .container1 e li numera in maniera ordinata. Al click di .square1 cambia il colore, al secondo click lo rimuove.
+ * Attribuisce .container1 al #container. Inserisce 100 elementi .square1 dentro al .container e li numera in maniera ordinata. Al click di .square1 cambia il colore, al secondo click lo rimuove.
  */
 function genMatrixLvl1(){
-    //inserire classe container
-    
 
     //inserire quadrati all'interno del container
     for (let i = 1; i <= 100; i++) {
@@ -71,16 +70,18 @@ function genMatrixLvl1(){
                 this.style.backgroundColor = "turquoise"
     
                 this.addEventListener('click', function(){
-                    this.style.backgroundColor = "inherit"
+                    this.style.backgroundColor = "#444"
                 })
             })
     }
 
 }
 
+
+/**
+ * Attribuisce .container1 al #container. Inserisce 100 elementi .square2 dentro al .container e li numera in maniera ordinata. Al click di .square1 cambia il colore, al secondo click lo rimuove.
+ */
 function genMatrixLvl2(){
-    //inserire classe per container di livello 2
-    
 
     //inserire quadrati all'interno del container
     for (let i = 1; i <= 81; i++) {
@@ -100,16 +101,18 @@ function genMatrixLvl2(){
                 this.style.backgroundColor = "turquoise"
     
                 this.addEventListener('click', function(){
-                    this.style.backgroundColor = "inherit"
+                    this.style.backgroundColor = "#444"
                 })
             })
     }
 
 }
 
+
+/**
+ * Attribuisce .container1 al #container. Inserisce 100 elementi .square3 dentro al .container e li numera in maniera ordinata. Al click di .square1 cambia il colore, al secondo click lo rimuove.
+ */
 function genMatrixLvl3(){
-    //inserire classe per container di livello 3
-    
 
     //inserire quadrati all'interno del container
     for (let i = 1; i <= 49; i++) {
@@ -129,7 +132,7 @@ function genMatrixLvl3(){
                 this.style.backgroundColor = "turquoise"
     
                 this.addEventListener('click', function(){
-                    this.style.backgroundColor = "inherit"
+                    this.style.backgroundColor = "#444"
                 })
             })
     }
